@@ -65,9 +65,9 @@ def scrap_results():
             td_tags = part_b_subject_list[tr_tag].find_all('td')
             subject = td_tags[0].text.strip()
             theory_mark = td_tags[1].text.strip()
-            practical_mark = td_tags[2].text.strip() if not " " else "-"
+            practical_mark = td_tags[2].text.strip() if not "" else "-"
             total_mark = td_tags[3].text.strip()
-            marks_dict_b[subject] = [theory_mark, internal_mark, total_mark]
+            marks_dict_b[subject] = [theory_mark, practical_mark, total_mark]
 
 
         part_b_total = part_b_subject_list[-1].find_all('td')[1].span.text.strip()
@@ -113,4 +113,4 @@ if __name__ == '__main__':
     sys.stdout.flush()
     finished = scrap_results()
     if finished:
-        print('Finished! Check the results.txt file!')
+        print('Finished! Check the '+str(search_id)+'.txt file!')
