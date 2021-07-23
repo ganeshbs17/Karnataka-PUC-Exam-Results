@@ -3,9 +3,14 @@ import sys
 from bs4 import BeautifulSoup as bs
 from prettytable import PrettyTable
 
-reg_id_start = 832500
-reg_id_end = 832510
-result_url = 'http://karresults.nic.in/resPUC_2018.asp'
+search_id = input("Enter a file name to save result (eg: College Name) : ")
+print("A valid Reg No is 6 digit number")
+reg_id_start =input("Enter Starting Register Number : ") 
+reg_id_end = input("Enter Ending Register Number : ")
+result_url = 'http://karresults.nic.in/resPUC_2021.asp'
+
+reg_id_start=int(reg_id_start)
+reg_id_end= int(reg_id_end)
 
 
 def scrap_results():
@@ -95,7 +100,7 @@ def scrap_results():
             temp.extend(marks_field)
             result_table_b.add_row(temp)
 
-        with open('results.txt', 'a', encoding='utf-8') as infile:
+        with open(str(search_id)+'.txt', 'a', encoding='utf-8') as infile:
             print(user_detail, file=infile)
             print(result_table_a, file=infile)
             print(result_table_b, file=infile, end="\n\n\n\n")
