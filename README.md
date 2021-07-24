@@ -19,7 +19,7 @@ Requires Python installed
 2.install dependencies using ```" pip install -r requirements.txt "```
 
 ### Usage
-1. Run ```" test_pu.py "```
+1. Run ```" pu_test.py "```
 2. Enter a Filename to save Result
 3. Enter Starting and Ending Register IDs 
 4. Resuts will be saved in a txt file in same directory
