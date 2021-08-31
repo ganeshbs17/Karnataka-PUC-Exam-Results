@@ -16,7 +16,7 @@ Requires Python installed
 
 
 1. Clone the Repository.
-2.install dependencies using ```" pip install -r requirements.txt "```
+2. 2.install dependencies using ```" pip install -r requirements.txt "```
 
 ### Usage
 1. Run ```" pu_test.py "```
